@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         YouTube 2x Speed
 // @namespace    598
-// @version      1.2
+// @version      1.3
 // @description  Sets every YouTube video to 2x speed by default.
 // @author       luka598
 // @match        https://*.youtube.com/*
@@ -10,16 +10,16 @@
 
 (function() {
     'use strict';
-    function changePlayback(n) {
+    function changePlayback() {
         let nodes = document.querySelectorAll('video');
         nodes.forEach(function(node) {
             node.playbackRate=2
         });
-        if (n < 3) {setTimeout(()=>changePlayback(n+1), 5000)}
+        setTimeout(changePlayback(), 5000)
     }
 
     function init(){
-            changePlayback(0)
+            changePlayback()
     }
 
     init()
