@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         YouTube No Recomended
 // @namespace    598
-// @version      1.2
+// @version      1.3
 // @description  Removes recomended videos from Youtube
 // @author       luka598
 // @match        https://*.youtube.com/*
@@ -43,11 +43,8 @@
     }
 
     function init(){
-        if (window.location.href.includes("watch")){
-            removeRelated()
-        } else {
-            removeRecomended()
-        }
+        removeRelated()
+        removeRecomended()
     }
 
     init()
