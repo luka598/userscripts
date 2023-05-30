@@ -4,7 +4,7 @@
 // @version      1.0
 // @description  Sets every YouTube video to 2x speed by default.
 // @author       luka598
-// @match        https://www.youtube.com/*
+// @match        https://*.youtube.com/*
 // @grant        none
 // ==/UserScript==
 
