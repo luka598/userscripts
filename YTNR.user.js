@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         YouTube No Recomended
 // @namespace    598
-// @version      1.1
+// @version      1.2
 // @description  Removes recomended videos from Youtube
 // @author       luka598
 // @match        https://*.youtube.com/*
@@ -11,6 +11,7 @@
 (function() {
     'use strict';
     function removeRelated() {
+        console.log("removing related")
         {
             let nodes = document.querySelectorAll('ytm-item-section-renderer');
             nodes.forEach(function(node) {
@@ -19,6 +20,12 @@
         }
         {
             let nodes = document.querySelectorAll('#related');
+            nodes.forEach(function(node) {
+                node.hidden=true
+            });
+        }
+        {
+            let nodes = document.querySelectorAll('lazy-list');
             nodes.forEach(function(node) {
                 node.hidden=true
             });
